@@ -1,20 +1,20 @@
 1.3.4:
 
-In Kürze: Inhalte müssen sowohl in Hoch- wie auch Querformat angezeigt und bedient werden können. Nutzerinnen und Nutzer sollen selber entscheiden können, ob sie Inhalte im Hoch- oder im Querformat bevorzugen. 
+In Kürze: Inhalte müssen sowohl in Hoch- wie auch Querformat angezeigt und bedient werden können. Dies ermöglicht selber zu entscheiden, ob Inhalte im Hoch- oder im Querformat bevorzugt werden.
 
-Menschen mit bestimmten Behinderungen arbeiten mit einem fix montierten Ausgabegerät, zum Beispiel mit einem an einem Rollstuhl befestigten Smartphone (physisch in einer Halterung verankert). Ihnen ist es nicht möglich, das Gerät zu drehen. Menschen mit starker Sehbehinderung bevorzugen unter Umständen die Quer-Orientierung des Smartphones, weil Inhalte dann potenziell grösser dargestellt werden. Es ist deshalb wichtig, dass Web-Inhalte sowohl im Hoch- als auch im Querformat eines Ausgabegeräts angezeigt und bedient werden können. 
+Menschen mit bestimmten Behinderungen arbeiten mit einem fix montierten Ausgabegerät, z.B. mit einem an einem Rollstuhl befestigten Smartphone (physisch in einer Halterung verankert). Ihnen ist es nicht möglich, das Gerät zu drehen. Menschen mit starker Sehbehinderung bevorzugen unter Umständen die Quer-Orientierung des Smartphones, weil Inhalte dann potenziell grösser dargestellt werden. Es ist deshalb wichtig, dass Web-Inhalte (Anmerkung: finde das Wort "Web-Inhalte" gut! Könnten wir noch versuchen zu extrapolieren auf meine EKs) sowohl im Hoch- als auch im Querformat angezeigt und bedient werden können. Siehe auch 1.4.10.
 
 Passt sich der Inhalt nicht automatisch an die Bildschirmorientierung an, muss ein Schalter angeboten werden zum manuellen Drehen des Bildschirminhalts.
 
-Hinweis: Ausnahmen sind Anwendungsfälle, bei denen eine spezifische Bildschirmorientierung vorausgesetzt wird, bspw. eine Klavier-App, welche das Querformat benötigt, um genügend Tasten darzustellen (bzw. wo die benötigte Anzahl Tasten im Hochformat zu eng dargestellt werden müsste).
+Hinweis: Ausnahmen sind Anwendungsfälle, bei denen eine spezifische Bildschirmorientierung vorausgesetzt wird, etwa eine Klavier-App, welche das Querformat benötigt, um genügend Tasten darzustellen (bzw. wo die benötigte Anzahl Tasten im Hochformat zu eng dargestellt werden müsste).
 
 Verantwortlichkeiten:
-- Das Designteam definiert Ansichten, die sowohl in Hoch- wie auch in Querformat angezeigt und genutzt werden können.
+- Das Designteam definiert Ansichten, die sowohl im Hoch- wie auch im Querformat angezeigt und genutzt werden können.
 - Das Entwicklungsteam setzt die vom Designteam erarbeiteten Voraben sorgfältig um und sorgt in der Programmierung dafür, dass alle Inhalte in beiden Bildschirmausrichtungen korrekt angezeigt werden und bedienbar sind.
 
 1.3.5:
 
-In Kürze: Eingabefelder mit Angaben zur eigenen Person müssen automatisch ausgefüllt werden können. Dazu muss der Eingabezweck von Formularfeldern maschinenlesbar sein.
+In Kürze: Bei Formularen mit Angaben zur eigenen Person muss der Eingabezweck der entsprechenden Formularfelder maschinenlesbar sein (autocomplete-Attribut). Dies ermöglicht das automatische Ausfüllen derselben, was insbesondere Menschen mit kognitiven und motorischen Einschränkungen zugute kommt.
 
 Alle Menschen, insbesondere aber diejenigen mit kognitiven Behinderungen, profitieren von klar beschrifteten Eingabefeldern. Menschen mit motorischen Behinderungen profitieren vom automatischen Ausfüllen von Formularfeldern, weil dadurch die Notwendigkeit feinmotorischer Bewegungen reduziert wird. Programmatische Methoden können diesen Menschen helfen, den Zweck eines Eingabefeldes zu erkennen und Antworten voreinzugeben. 
 
@@ -25,41 +25,46 @@ Wichtig: Dies trifft nur auf Formularfelder zu, die Daten über die Person samme
 Hinweis: Sowohl fehlende als auch falsche autocomplete-Attribute (etwa autocomplete="birthday" statt autocomplete="bday") verletzen dieses Erfolgskriterium.
 
 Verantwortlichkeiten:
-- Das Entwicklungsteam führt bei jedem Formularfeld, das Daten über die ausfüllende Person sammelt und in der Liste unter https://www.w3.org/TR/WCAG21/#input-purposes aufgeführt ist, das passende autocomplete-Attribut hinzu.
+- Das Entwicklungsteam versieht jedes Formularfeld, das Daten über die ausfüllende Person sammelt und in der Liste unter https://www.w3.org/TR/WCAG21/#input-purposes aufgeführt ist, mit dem passenden autocomplete-Attribut.
 
 1.4.10:
 
-In Kürze: Inhalt muss sich den Viewport-Mindestdimensionen anpassen (sog. Reflow). Sehbehinderte Menschen arbeiten häufig mit niedriger Bildschirmauflösung und/oder hohem Zoom-Faktor. Alle müssen die Inhalte nutzen können, ohne in mehr als eine Richtung scrollen zu müssen (entweder horizontal oder vertikal, nicht aber beides). 
+In Kürze: Inhalt muss sich den Viewport-Mindestdimensionen anpassen (sog. Reflow). Dies ermöglicht sehbehinderten Menschen, alle Inhalte auch bei hoher Vergrösserung nutzen zu können, ohne in mehr als eine Richtung scrollen zu müssen.
 
-Die vorgegebene Auflösung hierfür sind 320x256 CSS-Pixel, in der alle Inhalte korrekt darstellbar sein müssen, ohne dass es zu Überlappungen kommt und ohne, dass Scrollen in mehr als eine Richtung notwendig wird. 
-- Vertikaler Inhalt macht bei einer Breite von 320 CSS-Pixeln kein horizontales Scrollen nötig.
-- Horizontaler Inhalt macht bei einer Höhe von 256 CSS-Pixeln kein vertikales Scrollen nötig. 
+Sehbehinderte Menschen arbeiten häufig mit niedriger Bildschirmauflösung und/oder hohem Zoom-Faktor. Web-Inhalte müssen entsprechend auch unter diesen Umständen korrekt angezeigt werden (ohne Überlappungen oder sonstwie störende Effekte), wobei nur in eine Richtung gescrollt werden darf (entweder horizontal oder vertikal, nicht aber beides). Siehe auch 1.3.4.
 
-Eine Ausnahme gilt für Bilder, Karten, Diagramme, Video, Spiele, Datentabellen und für Webapplikationen, bei denen eine Toolbar sichtbar bleiben muss: bei diesen darf auch in zwei Richtungen gescrollt werden.
+Die vorgegebene Mindest-Auflösung hierfür ist 320x256 CSS-Pixel.
+
+Ausnahmen: Bei Bildern, Karten, Diagrammen, Videos, Spielen, Datentabellen und Webapplikationen, bei denen eine Toolbar sichtbar bleiben muss, darf auch in zwei Richtungen gescrollt werden.
 
 Verantwortlichkeiten:
 - Das Designteam definiert die Inhalte so, dass der Reflow berücksichtigt wird.
 - Das Entwicklungsteam setzt die vom Designteam definierten Vorgaben sorgfältig um. Es sorgt dafür, dass der Reflow funktioniert wie vorgeschrieben. 
-- Die Inhaltsverantwortlichen kontrollieren die erstellten Inhalte auf ihre korrekte Darstellung in den Viewport-Mindestdimensionen. Sind Bilder zu breit oder Wörter zu lang und führen zu einem Scrollbedarf in mehrere Richtungen, sind die Inhalte entsprechend anzupassen.
+- Die Inhaltsverantwortlichen kontrollieren die erstellten Inhalte auf ihre korrekte Darstellung in den Viewport-Mindestdimensionen. Sind etwa Wörter zu lang und führen zu einem Scrollbedarf in mehrere Richtungen, sind die Inhalte entsprechend anzupassen.
 
 1.4.11:
 
-In Kürze: Kontrastverhältnisse bei Bedienelementen und grafischen Elementen müssen ausreichend sein. Damit diese Inhalte von Menschen mit Sehbehinderungen ausreichend gut wahrgenommen werden können, muss das Kontrastverhältnis mindestens 3:1 betragen. In Bezug auf Bedienelemente betrifft dies z.B. Textfelder, Radiobuttons, Checkboxen, Schalter, Tabs, etc. In Bezug auf grafische Objekte betrifft es Objekte, die für das Verständnis von Inhalten erforderlich sind, z.B. informative Verbindungslinien zwischen Abbildungsteilen, etc.
+(Anmerkung: Habe hier an 1.4.2 angeglichen. Ist vielleicht jetzt zu stark vereinheitlicht und muss es auch nicht unbedingt sein.)
 
-Jeder visuelle Hinweis, der für die Wahrnehmung und Bedienung erforderlich ist, insbesondere auch um den Zustand eines Elements wahrzunehmen, muss ausreichend kontraststark sein (mindestens 3:1). Das gilt z.B. für Formularfeldbegrenzungen, Ausklappindikatoren bei Flyouts/Dropdowns, das Häkchen einer Checkbox, etc.). Wenn die Farbe eines Bedienelements ändert, wenn es den Fokus bekommt oder wenn es aktiv ist, muss auch diese Farbe die Kontrastmindestanforderung erfüllen. Der Hover-Zustand eines Elements muss nicht unterscheidbar sein vom Standard-Zustand.
+In Kürze: Bedienelemente (z.B. Textfelder, Radiobuttons, Checkboxen, Schalter, Tabs) und grafische Elemente (z.B. Linien eines Diagramms) müssen sich farblich durch genügend Kontrast vom Hintergrund abheben. Dies ermöglicht es Menschen mit Sehbeeinträchtigung, dieselben erkennen und lesen zu können.
 
-Hinweis: Bei Schaltern wird lediglich empfohlen, den klickbaren Bereich ebenfalls ausreichend kontraststark zu umranden. Solange aufgrund von Position, Schriftart, etc., ein Schalter als solcher wahrnehmbar ist, ist eine kontraststarke Beschriftung ausreichend. Bei Textfeldern mit kontraststarkem Platzhaltertext bestehen keine Kontrastanforderungen an die Feldbegrenzungslinien. 
+Menschen mit Sehschwäche und Fehlsichtigkeit sind darauf angewiesen, dass sich Elemente gut sichtbar vom Hintergrund abheben. Deshalb müssen Bedienelemente und grafische Elemente einen ausreichend hohen Kontrastwert zum Hintergrund aufweisen.
 
-Ausreichende Kontraste in und von grafischen Elementen bedeuten, dass jeder visuelle Hinweis, der für die Wahrnehmung und die Bedienung erforderlich ist, genügend Kontrast aufweisen muss (mindestens 3:1). Gemeint sind damit z.B. Kurven und Linien eines Diagramms, darin enthaltene Symbole, Beschriftungen, etc. 
+Jeder visuelle Hinweis, der für die Wahrnehmung und Bedienung erforderlich ist, insbesondere auch um den Zustand eines Elements zu interpretieren, muss einen Kontrastwert von mindestens 3:1 aufweisen (Anmerkung: würde den Wert nicht in Klammern setzen, der ist wichtig!). Das gilt z.B. für Formularfeldbegrenzungen, Ausklappindikatoren bei Dropdowns, das Häkchen einer Checkbox, etc. Wenn zudem die Farbe eines Bedienelements ändert (etwa bei Fokus oder Aktivierung), dann muss auch diese Farbe die Kontrastmindestanforderung erfüllen. An den Hover-Zustand hingegen werden keine Anforderungen gestellt.
 
-Hinweis: Rein dekorative Grafiken sind nicht gemeint. Die Anforderungen an den Mindestkontrast gelten nur für sinntragende, informative grafische Elemente.
+Bei Schaltern wird empfohlen, den klickbaren Bereich ebenfalls ausreichend kontraststark zu umranden. Solange allerdings aufgrund von Position, Schriftart, etc., ein Schalter klar als solcher wahrnehmbar ist, ist eine kontraststarke Beschriftung ausreichend. Bei Textfeldern mit kontraststarkem Platzhaltertext bestehen keine Kontrastanforderungen an die Feldbegrenzungslinien. Siehe diesbezüglich auch 1.4.3.
 
-Tipp: Zerlegen Sie komplexe Grafiken in ihre kleinsten aussagekräftigen Teile. Prüfen Sie für jedes aussagekräftige Teil der Grafik dessen Kontrast zu den angrenzenden Farben.
+Ausreichende Kontraste in und von grafischen Elementen bedeuten, dass jeder visuelle Hinweis, der für die Wahrnehmung und die Bedienung erforderlich ist, einen Kontrastwert von mindestens 3:1 aufweisen muss. Gemeint sind damit z.B. Kurven und Linien eines Diagramms, darin enthaltene Symbole, Beschriftungen, etc. 
+
+Hinweis: Rein dekorative Grafiken sind nicht gemeint. Die Anforderungen an den Mindestkontrast gelten nur für sinntragende, informative grafische Elemente. (Anmerkung: Steht eigentlich unter 1.4.3 schon so, aber vielleicht ist Redundanz hier angebracht?)
+
+Tipp: Zerlegen Sie komplexe Grafiken in ihre kleinsten aussagekräftigen Teile. Prüfen Sie für jedes Teil dessen Kontrast zu den angrenzenden Farben.
 
 Verantwortlichkeiten:
-- Das Designteam definiert Farben so, dass die Kontrastmindestanforderungen berücksichtigt werden.
-- Das Entwicklungsteam setzt die vom Designteam definierten Vorgaben sorgfältig um. Wenn es zusätzliche Farben definieren muss, berücksichtigt es dabei die Kontrastmindestanforderungen.
-- Die Inhaltsverantwortlichen erstellen grafische Objekte (z.B. Kurven und Linien in Diagrammen, informative Verbindungslinien, u.ä.) nur so, dass die Kontrastmindestanforderungen erfüllt sind.
+- Das Designteam definiert eine Palette von Vorder- und Hintergrundfarben, die in den benötigten Kombinationen genügend Kontrast aufweisen.
+- Das Entwicklungsteam setzt die vom Designteam definierten Vorgaben sorgfältig um.
+- Die Inhaltsverantwortlichen gestalten Inhalte so, dass diese genügend Kontrast aufweisen.
+- Projektverantwortliche sollten sich bewusst sein, dass kontraststarke Designs (auch über die Mindestanforderungen hinaus) ein Vorteil für alle Sehenden sind.
 
 1.4.12:
 
