@@ -84,9 +84,9 @@ Verantwortlichkeiten:
 
 4.1.3:
 
-In Kürze: Statusmeldungen (Informationen über Erfolg, Fortschritt oder Ergebnis einer Aktion, oder auch über auftretende Fehler) müssen von assistierenden Technologien (z.B. Screenreader) erkannt werden können. Dies erlaubt die Ausgabe jener Meldungen, ohne dass sie manuell gesucht werden müssen und potenziell übersehen werden.
+In Kürze: Statusmeldungen (Informationen über Erfolg, Fortschritt oder Ergebnis einer Aktion, oder auch über auftretende Fehler) müssen von assistierenden Technologien (z.B. Screenreader) erkannt werden können. Dies erlaubt die automatische Ausgabe jener Meldungen, ohne dass sie manuell gesucht werden müssen und potenziell übersehen werden.
 
-Da assistierende Technologien (z.B. Screenreader) nicht immer den ganzen Seiteninhalt überwachen, sind in Fällen, wo sich ein Teil der aktuellen Seite ändert (z.B. um eine Fehlermeldung anzuzeigen), spezielle Massnahmen erforderlich, damit diese Änderungen trotzdem ausgegeben werden, ohne dass der Fokus dabei neu gesetzt wird (z.B. durch Neuladen der Seite o.ä.).
+Da assistierende Technologien (z.B. Screenreader) nicht immer den ganzen Seiteninhalt überwachen, sind in Fällen, wo sich ein Teil der aktuellen Seite ändert (z.B. um eine Fehlermeldung anzuzeigen), spezielle Massnahmen erforderlich, damit diese Änderungen trotzdem ausgegeben werden, und ohne dass der Fokus dabei neu gesetzt wird (z.B. durch Neuladen der Seite o.ä.).
 
 Wenn Statusmeldungen visuell eingeblendet werden (z.B. Fehlermeldungen, Bestätigungsmeldungen, Ladeanzeigen/Fortschrittsbalken, etc.), müssen diese über geeignete Rollen oder Eigenschaften so ausgezeichnet werden, dass sie auch programmiertechnisch ermittelbar sind und mittels assistierender Technologien ausgegeben werden können.
 
